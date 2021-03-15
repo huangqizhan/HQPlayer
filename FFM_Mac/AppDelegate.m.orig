@@ -1,0 +1,49 @@
+//
+//  AppDelegate.m
+//  FFM_Mac
+//
+//  Created by 黄麒展 on 2020/2/5.
+//  Copyright © 2020 黄麒展. All rights reserved.
+//
+
+#import "AppDelegate.h"
+#import "HomeViewController.h"
+#import "HomeViewController.h"
+
+@interface AppDelegate ()
+
+@property (weak) IBOutlet NSWindow *window;
+@end
+
+@implementation AppDelegate
+<<<<<<< HEAD
+//
+- (MainWindownController *)mainWindowController{
+    if (_mainWindowController == nil) {
+        _mainWindowController = [[MainWindownController alloc] init];
+        _mainWindowController.contentViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
+    }
+    return _mainWindowController;
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+//    [self.window close];
+//    [self.mainWindowController.window]
+//    [self.mainWindowController.window center];
+//    [self.mainWindowController.window orderFront:nil];
+    HomeViewController *homeCon = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
+    self.window.contentViewController = homeCon;
+=======
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    self.window.contentViewController = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:[NSBundle mainBundle]];
+>>>>>>> a1da59708b2ab00232a274ef756bda13d451ce1b
+}
+
+
+- (void)applicationWillTerminate:(NSNotification *)aNotification {
+    // Insert code here to tear down your application
+}
+
+
+@end

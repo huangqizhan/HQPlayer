@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="protocolBox" destination="jM0-wP-3j4" id="knH-dd-AmW"/>
+                <outlet property="textView" destination="AaG-4d-x9F" id="9yk-qf-VDR"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="657" height="424"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="KuT-Oy-uRJ">
+                    <rect key="frame" x="301" y="39" width="113" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="KVp-uA-n5r"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" title="按钮" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="dA1-wM-Zv9">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttonAction:" target="-2" id="nVs-PV-93n"/>
+                    </connections>
+                </button>
+                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPx-sg-5Cq">
+                    <rect key="frame" x="115" y="153" width="485" height="251"/>
+                    <clipView key="contentView" copiesOnScroll="NO" id="SnI-Gq-7Qy">
+                        <rect key="frame" x="0.0" y="0.0" width="470" height="251"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="AaG-4d-x9F">
+                                <rect key="frame" x="0.0" y="0.0" width="470" height="251"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <size key="minSize" width="470" height="251"/>
+                                <size key="maxSize" width="561" height="10000000"/>
+                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="jGy-fU-oXK">
+                        <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="FcF-5B-IZr">
+                        <rect key="frame" x="470" y="0.0" width="15" height="251"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jM0-wP-3j4">
+                    <rect key="frame" x="0.0" y="381" width="99" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="fpp-fX-jvM">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>Item 1</string>
+                            <string>Item 2</string>
+                            <string>Item 3</string>
+                        </objectValues>
+                    </comboBoxCell>
+                </comboBox>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DfX-kU-lvq">
+                    <rect key="frame" x="7" y="340" width="83" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" title="Play" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="yeL-uo-gkq">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="playAction:" target="-2" id="YxN-ai-loH"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifC-Jw-dyI">
+                    <rect key="frame" x="7" y="291" width="83" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" title="Record" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="IM2-Bi-PaC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="recordAction:" target="-2" id="uNs-pP-5Pk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="KuT-Oy-uRJ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="301" id="1JX-a9-pMZ"/>
+                <constraint firstItem="ZPx-sg-5Cq" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="9pm-fi-NLX"/>
+                <constraint firstAttribute="bottom" secondItem="KuT-Oy-uRJ" secondAttribute="bottom" constant="39" id="LBK-Py-urv"/>
+                <constraint firstAttribute="trailing" secondItem="KuT-Oy-uRJ" secondAttribute="trailing" constant="243" id="W5N-od-8pX"/>
+                <constraint firstItem="ZPx-sg-5Cq" firstAttribute="height" secondItem="Hz6-mo-xeY" secondAttribute="width" multiplier="0.26" constant="80" id="a9D-17-xJd"/>
+                <constraint firstItem="ZPx-sg-5Cq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="115" id="gXw-Pb-3ew"/>
+                <constraint firstAttribute="trailing" secondItem="ZPx-sg-5Cq" secondAttribute="trailing" constant="57" id="hc1-aU-Yl9"/>
+            </constraints>
+            <point key="canvasLocation" x="428.5" y="-162"/>
+        </customView>
+    </objects>
+</document>

@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  FFM_Mac
+//
+//  Created by 黄麒展 on 2020/2/8.
+//  Copyright © 2020 黄麒展. All rights reserved. 
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+//#include "ffmpeg_config_info.h"
+//#include "remote_pull_stream.h"
+
+
+//#import "HQData.h"
+
+
+
+
+#endif /* PrefixHeader_pch */
